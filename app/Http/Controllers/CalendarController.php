@@ -2,52 +2,34 @@
 
 namespace App\Http\Controllers;
 
-use Carbon\Carbon;
+use App\Services\Calendar\CalendarService;
 use Illuminate\Http\Request;
 
 class CalendarController extends Controller
 {
+    private CalendarService $calendarService;
+
+    public function __construct(CalendarService $calendarService)
+    {
+        $this->calendarService = $calendarService;
+    }
+
     public function index(Request $request)
     {
-        $month = $request->query('month', date('m'));
-        $year = $request->query('year', date('Y'));
+        $month = (int) $request->query('month', date('m'));
+        $year = (int) $request->query('year', date('Y'));
 
-        $month = (int) $month;
-        $year = (int) $year;
+        $navigation = $this->calendarService->getNavigation($month, $year);
+        $weeks = $this->calendarService->generateCalendar($month, $year);
 
-        $prevMonth = $month - 1;
-        $prevYear = $year;
-        if ($prevMonth < 1) {
-            $prevMonth = 12;
-            $prevYear--;
-        }
-
-        $nextMonth = $month + 1;
-        $nextYear = $year;
-        if ($nextMonth > 12) {
-            $nextMonth = 1;
-            $nextYear++;
-        }
-
-        $firstDay = Carbon::create($year, $month, 1);
-        $lastDay = $firstDay->copy()->endOfMonth();
-
-        $startDate = $firstDay->copy()->startOfWeek(Carbon::MONDAY);
-        $endDate = $lastDay->copy()->endOfWeek(Carbon::SUNDAY);
-
-        $dates = [];
-        $currentDate = $startDate->copy();
-        while ($currentDate <= $endDate) {
-            $dates[] = [
-                'day' => $currentDate->day,
-                'month' => $currentDate->month,
-                'year' => $currentDate->year,
-                'isCurrentMonth' => $currentDate->month == $month
-            ];
-            $currentDate->addDay();
-        }
-        $weeks = array_chunk($dates, 7);
-
-        return view('main.calendar.index', compact('weeks', 'month', 'year', 'prevMonth', 'prevYear', 'nextMonth', 'nextYear'));
+        return view('main.calendar.index', [
+            'weeks' => $weeks,
+            'month' => $month,
+            'year' => $year,
+            'prevMonth' => $navigation['prevMonth'],
+            'prevYear' => $navigation['prevYear'],
+            'nextMonth' => $navigation['nextMonth'],
+            'nextYear' => $navigation['nextYear'],
+        ]);
     }
 }
