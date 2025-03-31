@@ -3,7 +3,7 @@
         <div class="container">
             <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
                 <div class="navbar-brand w-100">
-                    <a href="/index.html">
+                    <a href="#">
                     </a>
                 </div>
                 <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -13,19 +13,11 @@
                     </div>
                     <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                         <ul class="navbar-nav">
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item"><a class="dropdown-item" href="/services.html">Services I</a></li>
-                                            <li class="nav-item"><a class="dropdown-item" href="/services2.html">Services II</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item"><a class="dropdown-item" href="/pricing.html">Pricing</a></li>
-                                    <li class="nav-item"><a class="dropdown-item" href="/onepage.html">One Page</a></li>
-                                </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('calendar.index') }}" data-bs-toggle="dropdown">Zadanie 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('excel.index') }}" data-bs-toggle="dropdown">Zadanie 2</a>
                             </li>
                         </ul>
 
