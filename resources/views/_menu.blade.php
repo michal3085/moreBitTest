@@ -14,16 +14,18 @@
                     <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('calendar.index') }}" data-bs-toggle="dropdown">Zadanie 1</a>
+                                <a class="nav-link" href="{{ route('calendar.index') }}">Zadanie 1</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('excel.index') }}" data-bs-toggle="dropdown">Zadanie 2</a>
+                                <a class="nav-link" href="{{ route('excel.index') }}">Zadanie 2</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('task3') }}" data-bs-toggle="dropdown">Zadanie 3</a>
+                                <a class="nav-link" href="{{ route('task3') }}">Zadanie 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('task4') }}">Zadanie 4</a>
                             </li>
                         </ul>
-
                     </div>
                     <!-- /.offcanvas-body -->
                 </div>
