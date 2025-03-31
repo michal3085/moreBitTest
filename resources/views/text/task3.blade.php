@@ -88,6 +88,8 @@
         </ul>
 
         <h2 class="mt-2">Dodatkowo</h2>
-        Możemy za pomocą np. jQuery pokazywać bądź ukrywać pole NIP i odpowiednio walidować to w form request, na podstawie wybranego 'user_type'.<br>
+        <span>
+            Możemy za pomocą np. jQuery pokazywać bądź ukrywać pole NIP i odpowiednio walidować to w form request, na podstawie wybranego 'user_type'.
+        </span>
     </div>
 @endsection
