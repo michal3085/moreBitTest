@@ -16,6 +16,6 @@ class ExcelController extends Controller
     {
         $result = $service->doService($request);
 
-        return view('main.excel.index', ['result' => $result]);
+        return redirect()->route('excel.index')->with('result', $result);
     }
 }

@@ -15,15 +15,19 @@
             <button type="submit" class="btn btn-primary">Konwertuj</button>
         </form>
 
-        @if (isset($result))
+        @if (session('result'))
             <div class="alert alert-success mt-3">
-                Wartość: <strong>{{ $result }}</strong>
+                Wartość: <strong>{{ session('result') }}</strong>
             </div>
         @endif
 
-        @if (session('error'))
+        @if ($errors->any())
             <div class="alert alert-danger mt-3">
-                {{ session('error') }}
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
         @endif
     </div>
