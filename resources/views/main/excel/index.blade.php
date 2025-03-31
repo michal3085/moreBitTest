@@ -1,4 +1,4 @@
-@extends('main._layout')
+@extends('_layout')
 
 @section('content')
     <div class="container mt-5">
@@ -9,7 +9,7 @@
 
             <div class="mb-3">
                 <label for="cell" class="form-label">Podaj komórkę (np. A1, B2, AA10)</label>
-                <input type="text" class="form-control" id="cell" name="cell" required>
+                <input type="text" class="form-control" id="cell" name="cell" value="{{ old('cell') }}" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Konwertuj</button>

@@ -19,6 +19,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('excel.index') }}" data-bs-toggle="dropdown">Zadanie 2</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('task3') }}" data-bs-toggle="dropdown">Zadanie 3</a>
+                            </li>
                         </ul>
 
                     </div>
