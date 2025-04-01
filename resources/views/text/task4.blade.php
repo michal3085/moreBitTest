@@ -29,7 +29,7 @@
 
             <!-- Puste taby B-E -->
             <div class="tab-pane fade" id="content-b" role="tabpanel" aria-labelledby="tab-b">
-                <h2>Brak danych dla zakładki B</h2>
+                @include('text.task4_components._answerB')
             </div>
             <div class="tab-pane fade" id="content-c" role="tabpanel" aria-labelledby="tab-c">
                 <h2>Brak danych dla zakładki C</h2>
