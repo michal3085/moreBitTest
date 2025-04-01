@@ -3,7 +3,8 @@
         <div class="container">
             <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
                 <div class="navbar-brand w-100">
-                    <a href="#">
+                    <a href="https://github.com/michal3085/moreBitTest" target="_blank">
+                        Michał Broszkiewicz <br> (link do github z kodem)
                     </a>
                 </div>
                 <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
