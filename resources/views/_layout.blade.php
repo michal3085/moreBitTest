@@ -9,7 +9,7 @@
     <meta name="keywords"
           content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
     <meta name="author" content="elemis">
-    <title>Sandbox - Modern & Multipurpose Bootstrap 5 Template</title>
+    <title>Michal B. - zadania rekrutacyjne</title>
     <link rel="shortcut icon" href="/assets/img/favicon.png">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="/assets/css/plugins.css">
