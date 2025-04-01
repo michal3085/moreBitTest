@@ -25,6 +25,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('task4') }}">Zadanie 4</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('task5') }}">Zadanie 5</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- /.offcanvas-body -->

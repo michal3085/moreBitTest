@@ -22,3 +22,8 @@ Route::get('task/3', function () {
 Route::get('task/4', function () {
     return view('text.task4');
 })->name('task4');
+
+// 5
+Route::get('task/5', function () {
+    return view('text.task5');
+})->name('task5');
