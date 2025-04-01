@@ -32,7 +32,7 @@
                 @include('text.task4_components._answerB')
             </div>
             <div class="tab-pane fade" id="content-c" role="tabpanel" aria-labelledby="tab-c">
-                <h2>Brak danych dla zakładki C</h2>
+                @include('text.task4_components._answerC')
             </div>
             <div class="tab-pane fade" id="content-d" role="tabpanel" aria-labelledby="tab-d">
                 <h2>Brak danych dla zakładki D</h2>
